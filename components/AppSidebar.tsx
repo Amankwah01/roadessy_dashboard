@@ -14,25 +14,15 @@ import Image from 'next/image'
 
 
 const items = [
-  { title: 'Dashboard', 
-    href: '/',
-    icon: LayoutDashboard
-  },
-  { title: 'Projects', 
-    href: '/projects',
-    icon: Folder 
-
-  },
-  { title: 'Teams', 
-    href: '/teams',
-    icon: User
-  },
-
-    {
+  {
     title: "Home",
-    href: "#",
+    href: "/",
     icon: Home,
   },
+  { title: "Dashboard", href: "/", icon: LayoutDashboard },
+  { title: "Projects", href: "/projects", icon: Folder },
+  { title: "Teams", href: "/teams", icon: User },
+
   {
     title: "Inbox",
     href: "#",
@@ -52,8 +42,8 @@ const items = [
     title: "Settings",
     href: "#",
     icon: Settings,
-  }
-]
+  },
+];
 
 const AppSidebar = () => {
   return (
@@ -70,7 +60,7 @@ const AppSidebar = () => {
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarSeparator />
+      <SidebarSeparator className='-ml-0.5'/>
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>

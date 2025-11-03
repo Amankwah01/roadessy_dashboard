@@ -20,14 +20,27 @@ const Navbar = () => {
   return (
     <nav className="p-4 flex items-center justify-between">
       {/* LEFT */}
-      <SidebarTrigger />
+      <div className="flex w-full items-center">
+        <SidebarTrigger>
+          <Button variant="ghost" size="icon" asChild>
+            <SquareMenu className="h-5 w-5" />
+            <span className="sr-only">Open sidebar</span>
+          </Button>
+        </SidebarTrigger>
+        <div className="w-full flex-1  items-center text-center">
+          <Link href="/dashboard" className="ml-4 font-bold text-lg">
+            Roadessy Dashboard
+          </Link>
+        </div>
+      </div>
+
       {/* RIGHT */}
       <div className="flex items-center gap-4">
-        <Link href="/">Dashboard</Link>
+        <Link href="/">Home</Link>
         {/* THEME MENU */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" size="icon">
+            <Button variant="ghost" size="icon">
               <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
               <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
               <span className="sr-only">Toggle theme</span>
@@ -70,8 +83,6 @@ const Navbar = () => {
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-
-
       </div>
     </nav>
   );

@@ -55,13 +55,13 @@ export default function MapProvider({
   // (loading overlay, controls, search UI). It must not introduce extra border-radius
   // that would clip overlays, and should inherit the parent's size. Set pointer-events-none
   // so the provider wrapper itself doesn't block pointer events to the Mapbox canvas.
-  <div className="absolute inset-0 w-full h-full z-[1000] pointer-events-none">
+  <div className="absolute inset-0 w-full h-full z-1000 pointer-events-none">
       <MapContext.Provider value={{ map: map.current! }}>
         {children}
       </MapContext.Provider>
 
       {!loaded && (
-        <div className="absolute inset-0 flex items-center justify-center bg-background/80 z-[1000] pointer-events-auto">
+        <div className="absolute inset-0 flex items-center justify-center bg-background/80 z-1000 pointer-events-auto">
           <div className="text-lg font-medium">Loading map...</div>
         </div>
       )}

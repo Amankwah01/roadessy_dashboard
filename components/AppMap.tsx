@@ -75,9 +75,10 @@ export function AppMapCard() {
                 zoom: 12,
               }}
             >
-              {/* <MapSearch /> */}
               <MapCotrols />
               <MapStyles />
+              {/* <MapSearch /> */}
+              
             </MapProvider>
           </div>
         </CardContent>

@@ -3,8 +3,6 @@ import {AppBarChart} from "@/components/charts/AppBarChart";
 import { AppLineChart } from "@/components/charts/AppLineChart";
 import { AppPieChart } from "@/components/charts/AppPieChart";
 import { AppMapCard } from "@/components/AppMap";
-import { columns, DataColumn } from "@/components/data/columns";
-import { DataTable } from "@/components/data/data-table";
 import { ChartBarHorizontal } from "@/components/charts/AppBarChartH";
 import getData  from "@/components/data/data";
 

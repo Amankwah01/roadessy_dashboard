@@ -193,7 +193,7 @@ export const columns: ColumnDef<DataColumn>[] = [
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="h-8 w-8 p-0">
               <span className="sr-only">Open menu</span>
-              <MoreHorizontal className="animate-ping" />
+              <MoreHorizontal className="animate-wiggle" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -206,7 +206,7 @@ export const columns: ColumnDef<DataColumn>[] = [
             <DropdownMenuSeparator />
             <DropdownMenuItem>View customer</DropdownMenuItem>
             <DropdownMenuItem>
-              <Link className="animate-ping" href={`/dashboard`}>
+              <Link className="animate-wiggle" href={`/dashboard`}>
                 View road on dashboard
               </Link>
             </DropdownMenuItem>

@@ -12,7 +12,7 @@ export default function Home() {
       </p>
       <MapPinCheck size={100} />
       <Button className="mt-8">
-        <Link className="animate-ping" href="/projects">
+        <Link className="animate-wiggle" href="/projects">
           View Projects
         </Link>
       </Button>

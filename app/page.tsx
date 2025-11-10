@@ -12,7 +12,7 @@ export default function Home() {
       </p>
       <MapPinCheck size={100} />
       <Button className="mt-8">
-        <Link href="/dashboard">Go to Dashboard</Link>
+        <Link href="/projects">View Projects</Link>
       </Button>
     </div>
   );

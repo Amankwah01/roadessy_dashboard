@@ -53,7 +53,25 @@ const Navbar = () => {
             <DropdownMenuItem onClick={() => setTheme("dark")}>
               Dark
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("system")}>
+            {/* <DropdownMenuItem onClick={() => setTheme("blue")}>
+              Blue
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("green")}>
+              Green
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("neutral")}>
+              Neutral
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("red")}>
+              Red
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("rose")}>
+              Rose
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("yellow")}>
+              Yellow
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("system")}> */}
               System
             </DropdownMenuItem>
           </DropdownMenuContent>

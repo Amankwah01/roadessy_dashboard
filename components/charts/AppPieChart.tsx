@@ -61,7 +61,7 @@ export function AppPieChart() {
   }, []);
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col min-h-[425px] w-full">
       <CardHeader className="items-center pb-0">
         <CardTitle>Road Defects</CardTitle>
         <CardDescription>January - June 2024</CardDescription>

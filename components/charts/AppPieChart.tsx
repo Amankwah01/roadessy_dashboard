@@ -61,7 +61,7 @@ export function AppPieChart() {
   }, []);
 
   return (
-    <Card className="flex flex-col min-h-[425px] w-full">
+    <Card className="flex flex-col h-full w-full">
       <CardHeader className="items-center pb-0">
         <CardTitle>Road Defects</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
@@ -71,7 +71,7 @@ export function AppPieChart() {
           config={chartConfig}
           className="mx-auto aspect-square max-h-[250px]"
         >
-          <PieChart>
+          <PieChart className="pb-5">
             <ChartTooltip
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
@@ -116,14 +116,14 @@ export function AppPieChart() {
           </PieChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col gap-2 text-sm">
+      {/* <CardFooter className="flex-col gap-2 text-sm">
         <div className="flex items-center gap-2 leading-none font-medium">
           Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
         </div>
         <div className="text-muted-foreground leading-none">
           Showing total roads for the last 6 months
         </div>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   );
 }

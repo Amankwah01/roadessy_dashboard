@@ -37,13 +37,6 @@ async function page() {
         <div className="bg-primary-foreground p-1 rounded-lg lg:col-span-2">
           <AppBarChart />
         </div>
-        <div className="bg-primary-foreground p-1 rounded-lg">Test</div>
-        <div className="bg-primary-foreground p-1 rounded-lg">Test</div>
-        <div className="bg-primary-foreground p-1 rounded-lg">Test</div>
-        <div className="bg-primary-foreground p-1 rounded-lg lg:col-span-2">
-          Test2
-        </div>
-        <div className="bg-primary-foreground p-1 rounded-lg">Test</div>
       </div>
       
     </div>

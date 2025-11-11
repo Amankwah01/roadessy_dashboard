@@ -1,12 +1,18 @@
 "use client";
 
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuItem, DropdownMenuSeparator } from "@/components/ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 import { Button } from "../ui/button";
 import { Checkbox } from "../ui/checkbox";
 import Link from "next/link";
-
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -52,7 +58,6 @@ export type DataColumn = {
 //     header: "Average IRI",
 //   },
 // ];
-
 
 export const columns: ColumnDef<DataColumn>[] = [
   {
@@ -146,7 +151,7 @@ export const columns: ColumnDef<DataColumn>[] = [
       );
     },
     cell: ({ row }) => (
-      <div className="lowercase text-center">{row.getValue("road_type")}</div>
+      <div className="lowercase">{row.getValue("road_type")}</div>
     ),
   },
   {
@@ -162,7 +167,11 @@ export const columns: ColumnDef<DataColumn>[] = [
         maximumFractionDigits: 2,
       }).format(ave_speed);
 
-      return <div className="text-right font-medium">{formatted} km<sup>2</sup>/h</div>;
+      return (
+        <div className="text-right font-medium">
+          {formatted} km<sup>2</sup>/h
+        </div>
+      );
     },
   },
   {
@@ -179,7 +188,7 @@ export const columns: ColumnDef<DataColumn>[] = [
       );
     },
     cell: ({ row }) => (
-      <div className="lowercase text-center">{row.getValue("status")}</div>
+      <div className="lowercase">{row.getValue("status")}</div>
     ),
   },
   {
@@ -199,9 +208,9 @@ export const columns: ColumnDef<DataColumn>[] = [
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
             <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(road.id)}
+              onClick={() => navigator.clipboard.writeText(road.name)}
             >
-              Copy road ID
+              Copy road name
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>View customer</DropdownMenuItem>

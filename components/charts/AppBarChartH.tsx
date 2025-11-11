@@ -40,8 +40,8 @@ export function ChartBarHorizontal() {
   return (
     <Card className="min-h-[425px] w-full">
       <CardHeader>
-        <CardTitle>Bar Chart - Horizontal</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Uploads</CardTitle>
+        <CardDescription>January - June 2026</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>

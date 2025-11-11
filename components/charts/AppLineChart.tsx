@@ -1,7 +1,7 @@
 "use client";
 
 import { TrendingUp } from "lucide-react";
-import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
+import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 import {
   Card,
@@ -118,102 +118,23 @@ export const description = "A linear area chart";
 // ]
 
 const chartIRIData = [
-  { date: "2024-04-01", IRI: 222 },
-  { date: "2024-04-02", IRI: 97 },
-  { date: "2024-04-03", IRI: 167 },
-  { date: "2024-04-04", IRI: 242 },
-  { date: "2024-04-05", IRI: 373 },
-  { date: "2024-04-06", IRI: 301 },
-  { date: "2024-04-07", IRI: 245 },
-  { date: "2024-04-08", IRI: 409 },
-  { date: "2024-04-09", IRI: 59 },
-  { date: "2024-04-10", IRI: 261 },
-  { date: "2024-04-11", IRI: 327 },
-  { date: "2024-04-12", IRI: 292 },
-  { date: "2024-04-13", IRI: 342 },
-  { date: "2024-04-14", IRI: 137 },
-  { date: "2024-04-15", IRI: 120 },
-  { date: "2024-04-16", IRI: 138 },
-  { date: "2024-04-17", IRI: 446 },
-  { date: "2024-04-18", IRI: 364 },
-  { date: "2024-04-19", IRI: 243 },
-  { date: "2024-04-20", IRI: 89 },
-  { date: "2024-04-21", IRI: 137 },
-  { date: "2024-04-22", IRI: 224 },
-  { date: "2024-04-23", IRI: 138 },
-  { date: "2024-04-24", IRI: 387 },
-  { date: "2024-04-25", IRI: 215 },
-  { date: "2024-04-26", IRI: 75 },
-  { date: "2024-04-27", IRI: 383 },
-  { date: "2024-04-28", IRI: 122 },
-  { date: "2024-04-29", IRI: 315 },
-  { date: "2024-04-30", IRI: 454 },
-  { date: "2024-05-01", IRI: 165 },
-  { date: "2024-05-02", IRI: 293 },
-  { date: "2024-05-03", IRI: 247 },
-  { date: "2024-05-04", IRI: 385 },
-  { date: "2024-05-05", IRI: 481 },
-  { date: "2024-05-06", IRI: 498 },
-  { date: "2024-05-07", IRI: 388 },
-  { date: "2024-05-08", IRI: 149 },
-  { date: "2024-05-09", IRI: 227 },
-  { date: "2024-05-10", IRI: 293 },
-  { date: "2024-05-11", IRI: 335 },
-  { date: "2024-05-12", IRI: 197 },
-  { date: "2024-05-13", IRI: 197 },
-  { date: "2024-05-14", IRI: 448 },
-  { date: "2024-05-15", IRI: 473 },
-  { date: "2024-05-16", IRI: 338 },
-  { date: "2024-05-17", IRI: 499 },
-  { date: "2024-05-18", IRI: 315 },
-  { date: "2024-05-19", IRI: 235 },
-  { date: "2024-05-20", IRI: 177 },
-  { date: "2024-05-21", IRI: 82 },
-  { date: "2024-05-22", IRI: 81 },
-  { date: "2024-05-23", IRI: 252 },
-  { date: "2024-05-24", IRI: 294 },
-  { date: "2024-05-25", IRI: 201 },
-  { date: "2024-05-26", IRI: 213 },
-  { date: "2024-05-27", IRI: 420 },
-  { date: "2024-05-28", IRI: 233 },
-  { date: "2024-05-29", IRI: 78 },
-  { date: "2024-05-30", IRI: 340 },
-  { date: "2024-05-31", IRI: 178 },
-  { date: "2024-06-01", IRI: 178 },
-  { date: "2024-06-02", IRI: 470 },
-  { date: "2024-06-03", IRI: 103 },
-  { date: "2024-06-04", IRI: 439 },
-  { date: "2024-06-05", IRI: 88 },
-  { date: "2024-06-06", IRI: 294 },
-  { date: "2024-06-07", IRI: 323 },
-  { date: "2024-06-08", IRI: 385 },
-  { date: "2024-06-09", IRI: 438 },
-  { date: "2024-06-10", IRI: 155 },
-  { date: "2024-06-11", IRI: 92 },
-  { date: "2024-06-12", IRI: 492 },
-  { date: "2024-06-13", IRI: 81 },
-  { date: "2024-06-14", IRI: 426 },
-  { date: "2024-06-15", IRI: 307 },
-  { date: "2024-06-16", IRI: 371 },
-  { date: "2024-06-17", IRI: 475 },
-  { date: "2024-06-18", IRI: 107 },
-  { date: "2024-06-19", IRI: 341 },
-  { date: "2024-06-20", IRI: 408 },
-  { date: "2024-06-21", IRI: 169 },
-  { date: "2024-06-22", IRI: 317 },
-  { date: "2024-06-23", IRI: 480 },
-  { date: "2024-06-24", IRI: 132 },
-  { date: "2024-06-25", IRI: 141 },
-  { date: "2024-06-26", IRI: 434 },
-  { date: "2024-06-27", IRI: 448 },
-  { date: "2024-06-28", IRI: 149 },
-  { date: "2024-06-29", IRI: 103 },
-  { date: "2024-06-30", IRI: 446 },
-]
+  { road: "University", IRI: 222 },
+  { road: "Engineering", IRI: 97 },
+  { road: "SRC Avenue", IRI: 167 },
+  { road: "Queens Hall", IRI: 242 },
+  { road: "Bamfo", IRI: 373 },
+  { road: "Republic", IRI: 301 },
+  { road: "Independence", IRI: 245 },
+  { road: "Science", IRI: 409 },
+  { road: "Brunei", IRI: 59 },
+  { road: "Conti", IRI: 261 },
+  { road: "Kotei Link", IRI: 327 },
+  { road: "Ayeduase Main", IRI: 292 },
+];
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
+  roads: {
+    label: "Road",
   },
   // desktop: {
   //   label: "Desktop",
@@ -233,18 +154,18 @@ const chartConfig = {
 export function AppLineChart() {
   return (
     <Card>
-      <CardHeader className="mb-12">
+      <CardHeader className="">
         <CardTitle>IRI Trend</CardTitle>
-        <CardDescription className="-mb-10">
+        {/* <CardDescription className="-mb-10">
           Showing total visitors for the last 6 months
-        </CardDescription>
+        </CardDescription> */}
       </CardHeader>
       <CardContent>
         <ChartContainer
           config={chartConfig}
-          className="w-full h-50 !important"
+          className="w-full !important h-[30vh]"
         >
-          <AreaChart data={chartIRIData}>
+          <AreaChart data={chartIRIData} className="">
             <defs>
               {/* <linearGradient id="fillDesktop" x1="0" y1="0" x2="0" y2="1">
                 <stop
@@ -284,30 +205,25 @@ export function AppLineChart() {
               </linearGradient>
             </defs>
             <CartesianGrid vertical={false} />
+            <YAxis
+              dataKey="IRI"
+              type="number"
+              tickFormatter={(val) => val.toLocaleString()}
+            />
             <XAxis
-              dataKey="date"
+              dataKey="road"
               tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              minTickGap={32}
-              tickFormatter={(value) => {
-                const date = new Date(value);
-                return date.toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                });
-              }}
+              axisLine={true}
+              tickMargin={1}
+              minTickGap={1}
+              angle={-30}
+              textAnchor="end"
             />
             <ChartTooltip
               cursor={false}
               content={
                 <ChartTooltipContent
-                  labelFormatter={(value) => {
-                    return new Date(value).toLocaleDateString("en-US", {
-                      month: "short",
-                      day: "numeric",
-                    });
-                  }}
+                  labelFormatter={(road) => `Road: ${road}`}
                   indicator="dot"
                 />
               }
@@ -326,7 +242,7 @@ export function AppLineChart() {
               stroke="var(--color-desktop)"
               stackId="a"
             /> */}
-            <ChartLegend content={<ChartLegendContent />} />
+            <ChartLegend className="mt-5" content={<ChartLegendContent />} />
           </AreaChart>
         </ChartContainer>
       </CardContent>

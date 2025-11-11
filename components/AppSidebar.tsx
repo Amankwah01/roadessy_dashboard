@@ -1,6 +1,31 @@
-import { Calendar, ChevronUp, Folder, Home, Inbox, LayoutDashboard, MapPinCheck, Search, Settings, User, User2 } from 'lucide-react'
-import React from 'react'
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarInput, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarSeparator } from './ui/sidebar' 
+import {
+  Calendar,
+  ChevronUp,
+  Folder,
+  Home,
+  Inbox,
+  LayoutDashboard,
+  MapPinCheck,
+  Search,
+  Settings,
+  User,
+  User2,
+} from "lucide-react";
+import React from "react";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarInput,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarSeparator,
+} from "./ui/sidebar";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,10 +33,9 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import Link from 'next/link'
-import Image from 'next/image'
-
+} from "@/components/ui/dropdown-menu";
+import Link from "next/link";
+import Image from "next/image";
 
 const items = [
   {
@@ -19,7 +43,7 @@ const items = [
     href: "/",
     icon: Home,
   },
-  { title: "Dashboard", href: "/", icon: LayoutDashboard },
+  { title: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { title: "Projects", href: "/projects", icon: Folder },
   { title: "Teams", href: "/teams", icon: User },
 
@@ -47,7 +71,7 @@ const items = [
 
 const AppSidebar = () => {
   return (
-    <Sidebar collapsible='icon'>
+    <Sidebar collapsible="icon">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -60,7 +84,7 @@ const AppSidebar = () => {
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarSeparator className='-ml-0.5'/>
+      <SidebarSeparator className="-ml-0.5" />
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
@@ -83,23 +107,25 @@ const AppSidebar = () => {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <SidebarMenuButton>
-                    <User2 /> John Doe <ChevronUp className='ml-auto' />
-                  </SidebarMenuButton>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align='end'>
-                  <DropdownMenuItem>Account</DropdownMenuItem>
-                  <DropdownMenuItem>Setting</DropdownMenuItem>
-                  <DropdownMenuItem variant='destructive'>SignOut</DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <SidebarMenuButton>
+                  <User2 /> John Doe <ChevronUp className="ml-auto" />
+                </SidebarMenuButton>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem>Account</DropdownMenuItem>
+                <DropdownMenuItem>Setting</DropdownMenuItem>
+                <DropdownMenuItem variant="destructive">
+                  SignOut
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>
     </Sidebar>
   );
-}
+};
 
-export default AppSidebar
+export default AppSidebar;

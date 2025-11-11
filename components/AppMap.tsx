@@ -47,11 +47,11 @@ export function AppMapCard() {
 
   return (
     <div className="*:data-[slot=card]:from-primary/5 *:data-[slot=card]:to-card dark:*:data-[slot=card]:bg-card grid grid-cols-1 gap-4 *:data-[slot=card]:bg-linear-to-t *:data-[slot=card]:shadow-xs">
-      <Card className="h-[50vh] p-0! overflow-hidden">
-        <CardHeader>
+      <Card className="h-[40vh] p-0! overflow-hidden">
+        {/* <CardHeader>
           <CardTitle className="mt-5">Map</CardTitle>
-          {/* <CardDescription className="mt-5">Map</CardDescription> */}
-        </CardHeader>
+          <CardDescription className="mt-5">Map</CardDescription>
+        </CardHeader> */}
 
         {/* CardContent placed as a flexible area so the map can expand to fill the card */}
         <CardContent className="p-0! flex-1 min-h-0 -mt-5">

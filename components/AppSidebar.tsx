@@ -40,7 +40,7 @@ import Image from "next/image";
 const items = [
   {
     title: "Home",
-    href: "/",
+    href: "/home",
     icon: Home,
   },
   { title: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
